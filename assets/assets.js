@@ -6,9 +6,16 @@ import edu_icon_dark from './edu-icon-dark.png';
 import project_icon from './project-icon.png';
 import project_icon_dark from './project-icon-dark.png';
 import vscode from './vscode.png';
-import firebase from './firebase.png';
+import intellij from './intellij.png';
+import WebStorm from './WebStorm.png';
+import MySQL from './MySQL.png';
+import PostgreSQL from './PostgreSQL.png';
+import MSSQL from './MSSQL.png';
+import androidstudio from './androidstudio.png';
 import figma from './figma.png';
 import git from './git.png';
+import gimp from './gimp.png';
+import canva from './canva.png';
 import mongodb from './mongodb.png';
 import right_arrow_white from './right-arrow-white.png';
 import logo from './logo.png';
@@ -45,9 +52,16 @@ export const assets = {
     project_icon,
     project_icon_dark,
     vscode,
-    firebase,
+    androidstudio,
+    intellij,
+    WebStorm,
+    MySQL,
+    MSSQL,
+    PostgreSQL,
     figma,
     git,
+    gimp,
+    canva,
     mongodb,
     right_arrow_white,
     logo,
@@ -106,11 +120,11 @@ export const serviceData = [
 ]
 
 export const infoList = [
-    { icon: assets.code_icon, iconDark: assets.code_icon_dark, title: 'Languages', description: 'HTML, CSS, JavaScript React Js, Next Js' },
-    { icon: assets.edu_icon, iconDark: assets.edu_icon_dark, title: 'Education', description: 'B.Sc. (Hons) in Information Technology' },
-    { icon: assets.project_icon, iconDark: assets.project_icon_dark, title: 'Projects', description: 'Built more than 5 projects' }
+    { icon: assets.code_icon, iconDark: assets.code_icon_dark, title: 'Languages', description: 'React Js, Angular JS, Next Js, React Native, Flutter, Tailwind CSS, TypeScript, JavaScript, HTML, CSS,  Spring Boot, Node.js' },
+    { icon: assets.edu_icon, iconDark: assets.edu_icon_dark, title: 'Education', description: 'B.Sc. (Hons) in Information Technology at University of Moratuwa' },
+    { icon: assets.project_icon, iconDark: assets.project_icon_dark, title: 'Projects', description: 'Built 4 projects' }
 ];
 
 export const toolsData = [
-    assets.vscode, assets.firebase, assets.mongodb, assets.figma, assets.git
+    assets.vscode, assets.androidstudio, assets.intellij, assets.WebStorm, assets.MySQL, assets.MSSQL, assets.PostgreSQL, assets.git, assets.figma, assets.gimp, assets.canva
 ];
