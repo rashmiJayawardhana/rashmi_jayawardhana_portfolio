@@ -29,7 +29,7 @@ const Work = ({isDarkMode}) => {
         whileInView={{opacity: 1}}
         transition={{delay: 0.7, duration: 0.5}}
         className='text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo'>
-          Welcome to my web development portfolio! Explore a collection of projects showcasing my expertise in front-end development.
+          Welcome to my web development portfolio! Explore a collection of projects showcasing my expertise in fullstack development.
         </motion.p>
 
       <motion.div 
@@ -48,9 +48,12 @@ const Work = ({isDarkMode}) => {
                         <h2 className='font-semibold'>{project.title}</h2>
                         <p className='text-sm text-gray-700'>{project.description}</p>
                     </div>
-                    <div className='border rounded-full border-black w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] group-hover:bg-lime-300 transition'>
-                        <Image src={assets.send_icon} alt='send icon' className='w-5' />
-                    </div>
+                    <a href={project.link} target="_blank" rel="noopener noreferrer">
+                        <div className='border rounded-full border-black w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] group-hover:bg-lime-300 transition'>
+                            <Image src={assets.send_icon} alt='send icon' className='w-5' />
+                        </div>
+                    </a>
+
                 </div>
             </motion.div>
         ))}

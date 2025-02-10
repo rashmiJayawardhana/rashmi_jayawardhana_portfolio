@@ -1,4 +1,5 @@
 import user_image from './user-image.jpg';
+import link from './link.png';
 import code_icon from './code-icon.png';
 import code_icon_dark from './code-icon-dark.png';
 import edu_icon from './edu-icon.png';
@@ -45,6 +46,7 @@ import right_arrow_bold_dark from './right-arrow-bold-dark.png';
 
 export const assets = {
     user_image,
+    link,
     code_icon,
     code_icon_dark,
     edu_icon,
@@ -95,21 +97,25 @@ export const workData = [
         title: 'Project Management System for Construction Companies',
         description: 'Level 2 Software Development Project',
         bgImage: '/work-1.jpg',
+        link: 'https://github.com/Jayaweera123/Ascendia-.git',
     },
     {
         title: 'Online Book Ordering System',
         description: 'Level 3 Enterprise Application Development Project',
         bgImage: '/work-2.jpg',
+        link: 'https://github.com/TechMancers',
     },
     {
         title: 'Flight Tracking and Travel Management Application',
         description: 'Level 3 Mobile Applications Development Project',
         bgImage: '/work-3.jpg',
+        link: 'https://github.com/rashmiJayawardhana/OnTheWay.git',
     },
     {
         title: 'Tic-Tac-Toe Game',
         description: 'Frontend Development',
         bgImage: '/work-4.png',
+        link: 'https://tic-tac-toe-game-angular.vercel.app/',
     },
 ]
 
