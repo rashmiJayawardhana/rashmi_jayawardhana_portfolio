@@ -1,5 +1,5 @@
 # 🚀 Rashmi Jayawardhana - Portfolio  
-[Screenshot (5)](https://github.com/user-attachments/assets/e00170af-18ee-4c39-91d7-cd41eb2e0e16)
+![Screenshot (5)](https://github.com/user-attachments/assets/e00170af-18ee-4c39-91d7-cd41eb2e0e16)
 
 
 Welcome to my portfolio! I am a **Fullstack Web Developer** based in Colombo and a third-year IT undergraduate at the **University of Moratuwa**. My passion lies in building efficient, user-friendly applications using modern web and mobile technologies.
