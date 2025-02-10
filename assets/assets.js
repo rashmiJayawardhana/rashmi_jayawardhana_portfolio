@@ -94,17 +94,17 @@ export const workData = [
     {
         title: 'Project Management System for Construction Companies',
         description: 'Level 2 Software Development Project',
-        bgImage: '/work-1.png',
+        bgImage: '/work-1.jpg',
     },
     {
         title: 'Online Book Ordering System',
         description: 'Level 3 Enterprise Application Development Project',
-        bgImage: '/work-2.png',
+        bgImage: '/work-2.jpg',
     },
     {
-        title: 'Mobile Transportation Application',
+        title: 'Flight Tracking and Travel Management Application',
         description: 'Level 3 Mobile Applications Development Project',
-        bgImage: '/work-3.png',
+        bgImage: '/work-3.jpg',
     },
     {
         title: 'Tic-Tac-Toe Game',
@@ -114,9 +114,9 @@ export const workData = [
 ]
 
 export const serviceData = [
-    { icon: assets.web_icon, title: 'Web design', description: 'Web development is the process of building, programming...', link: '' },
-    { icon: assets.mobile_icon, title: 'Mobile app', description: 'Mobile app development involves creating software for mobile devices...', link: '' },
-    { icon: assets.ui_icon, title: 'UI/UX design', description: 'UI/UX design focuses on creating a seamless user experience...', link: '' },
+    { icon: assets.web_icon, title: 'Web Development', description: 'Create dynamic and responsive websites using modern web technologies to provide engaging user experiences.', link: '' },
+    { icon: assets.mobile_icon, title: 'Mobile App Development', description: 'Develop intuitive and feature-rich mobile applications with focusing on performance and user-friendly design.', link: '' },
+    { icon: assets.ui_icon, title: 'UI/UX design', description: 'Design user interfaces with a focus on enhancing usability, accessibility, and overall user satisfaction.', link: '' },
 ]
 
 export const infoList = [

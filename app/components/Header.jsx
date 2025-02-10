@@ -29,7 +29,7 @@ const Header = () => {
       initial={{opacity: 0}}
       whileInView={{opacity: 1}}
       transition={{duration: 0.6, delay: 0.7}} 
-      className='max-w-2xl mx-auto font-Ovo'>I am a fullstack developer from Panadura, Sri Lanka.
+      className='max-w-2xl mx-auto font-Ovo'>I am a third-year IT undergraduate at the University of Moratuwa. I am passionate about Full Stack Development.
       </motion.p>
       <div className='flex flex-col sm:flex-row items-center gap-4 mt-4'>
         <motion.a 
