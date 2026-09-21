@@ -1,4 +1,4 @@
-import user_image from './user-image.jpg';
+import user_image from './user-image.png';
 import link from './link.png';
 import code_icon from './code-icon.png';
 import code_icon_dark from './code-icon-dark.png';
@@ -92,45 +92,135 @@ export const assets = {
     right_arrow_bold_dark
 };
 
+export const GITHUB_PROFILE = 'https://github.com/rashmiJayawardhana';
+
 export const workData = [
     {
+        title: 'Microservices Platform on Managed Kubernetes',
+        type: 'Group', year: '2026',
+        category: 'Cloud & DevOps',
+        description: 'Designed and deployed a five-service e-commerce platform on AWS EKS Fargate with Terraform IaC and GitHub Actions CI/CD. Owned cost management (~50% reduction) and disaster recovery planning.',
+        tech: ['Flask', 'Express', 'React', 'AWS EKS', 'Terraform', 'GitHub Actions'],
+        githubLink: GITHUB_PROFILE,
+    },
+    {
         title: 'Project Management System for Construction Companies',
-        description: 'Level 2 Software Development Project',
-        bgImage: '/work-1.jpg',
-        link: 'https://github.com/Jayaweera123/Ascendia-.git',
+        type: 'Group', year: '2024', org: 'Mentored by LSEG',
+        category: 'Full-Stack',
+        description: 'Web and mobile platform for five user roles covering project, task, and inventory management, with real-time low-stock and email notifications. Owned the admin/client modules and JWT auth.',
+        tech: ['React', 'Tailwind CSS', 'Flutter', 'Spring Boot', 'MySQL', 'Socket.IO'],
+        githubLink: 'https://github.com/Jayaweera123/Ascendia-.git',
     },
     {
-        title: 'Online Book Ordering System',
-        description: 'Level 3 Enterprise Application Development Project',
-        bgImage: '/work-2.jpg',
-        link: 'https://github.com/TechMancers',
+        title: 'Real-Time Task & Messaging App',
+        type: 'Individual', year: '2025',
+        category: 'Full-Stack',
+        description: 'Real-time messaging app on a hybrid REST/WebSocket architecture with push notifications, optimistic UI updates, offline queue handling, and automatic socket reconnection. Delivered in four days.',
+        tech: ['React Native', 'TypeScript', 'Redux Toolkit', 'Node.js', 'Socket.IO', 'MySQL'],
+        githubLink: GITHUB_PROFILE,
     },
     {
-        title: 'Flight Tracking and Travel Management Application',
-        description: 'Level 3 Mobile Applications Development Project',
-        bgImage: '/work-3.jpg',
-        link: 'https://github.com/rashmiJayawardhana/OnTheWay.git',
+        title: 'YouTube Upload Success Predictor for Sri Lankan Creators',
+        type: 'Individual', year: '2025',
+        category: 'Machine Learning',
+        description: 'XGBoost classifier (71.4% accuracy, 0.814 AUC-ROC) on pre-upload video features, using channel-relative labelling to prevent data leakage, with SHAP-based explanations served through Streamlit.',
+        tech: ['Python', 'XGBoost', 'SHAP', 'Streamlit'],
+        githubLink: GITHUB_PROFILE,
     },
     {
-        title: 'Tic-Tac-Toe Game',
-        description: 'Frontend Development',
-        bgImage: '/work-4.png',
-        link: 'https://tic-tac-toe-game-angular.vercel.app/',
+        title: 'QA Test Automation Suite',
+        type: 'Group', year: '2025',
+        category: 'QA & Testing',
+        description: 'Designed UI and API test cases from SRS documents, automated test scenarios, generated Allure reports, and configured CI builds.',
+        tech: ['Cypress', 'Cucumber BDD', 'Swagger', 'Allure', 'Jenkins'],
+        githubLink: GITHUB_PROFILE,
+    },
+    {
+        title: 'Flight Tracking & Travel Management App',
+        type: 'Individual', year: '2024',
+        category: 'Mobile',
+        description: 'Full-stack mobile app for real-time flight tracking with secure authentication and a responsive Android and iOS interface.',
+        tech: ['React Native', 'PostgreSQL', 'Zustand', 'Clerk', 'Tailwind CSS'],
+        githubLink: 'https://github.com/rashmiJayawardhana/OnTheWay.git',
+    },
+    {
+        title: 'Task Manager Application',
+        type: 'Individual', year: '2025',
+        category: 'Full-Stack',
+        description: 'Task-tracking web app with CRUD operations, status filtering, threaded comments, JWT authentication, and role-based access, containerized with Docker Compose.',
+        tech: ['Angular', 'Angular Material', 'Spring Boot', 'Spring Security', 'MySQL'],
+        githubLink: GITHUB_PROFILE,
+    },
+    {
+        title: 'Automated Lecture Video Summarization',
+        type: 'Group', year: '2025',
+        category: 'Research',
+        description: 'Co-developed a four-module deep learning pipeline condensing 60-minute lectures into narrated summaries. Owned Keyframe Detection (ResNet-50 + BiLSTM), reaching F1 = 0.87 on a 23,402-segment annotated dataset.',
+        tech: ['PyTorch', 'Whisper', 'BERT', 'ViT', 'FastAPI', 'Supabase'],
+        githubLink: GITHUB_PROFILE,
+    },
+    {
+        title: 'Cost-Performance Trade-offs in Cloud-Based LLM Inference',
+        type: 'Individual', year: '2025',
+        category: 'Research',
+        description: 'Reviewing AI/ML optimization techniques for cloud-based LLM serving — scheduling, deployment architecture, interruptible capacity, sparse models, and prompt reuse — into one cost-versus-latency view.',
+        tech: ['Review Paper'],
+        githubLink: null,
+        status: 'In Progress',
     },
 ]
 
 export const serviceData = [
-    { icon: assets.web_icon, title: 'Web Development', description: 'Create dynamic and responsive websites using modern web technologies to provide engaging user experiences.', link: '' },
-    { icon: assets.mobile_icon, title: 'Mobile App Development', description: 'Develop intuitive and feature-rich mobile applications with focusing on performance and user-friendly design.', link: '' },
-    { icon: assets.ui_icon, title: 'UI/UX design', description: 'Design user interfaces with a focus on enhancing usability, accessibility, and overall user satisfaction.', link: '' },
+    { icon: assets.web_icon, title: 'Web Development', description: 'Build dynamic, responsive web apps with React, Angular, and Next.js, focused on clean UI and real-time features.', link: '' },
+    { icon: assets.mobile_icon, title: 'Mobile App Development', description: 'Develop cross-platform mobile apps with React Native, Flutter, and Expo, focused on performance and smooth UX.', link: '' },
+    { icon: assets.ui_icon, title: 'UI/UX Design', description: 'Design clean, usable interfaces in Figma and translate them into pixel-accurate, accessible UI.', link: '' },
+    { icon: null, title: 'Backend & Cloud Engineering', description: 'Build REST APIs and microservices with Spring Boot and Node.js, deployed with Docker, AWS, and CI/CD pipelines.', link: '' },
 ]
 
 export const infoList = [
-    { icon: assets.code_icon, iconDark: assets.code_icon_dark, title: 'Languages', description: 'React Js, Angular JS, Next Js, React Native, Flutter, Tailwind CSS, TypeScript, JavaScript, HTML, CSS,  Spring Boot, Node.js' },
-    { icon: assets.edu_icon, iconDark: assets.edu_icon_dark, title: 'Education', description: 'B.Sc. (Hons) in Information Technology at University of Moratuwa' },
-    { icon: assets.project_icon, iconDark: assets.project_icon_dark, title: 'Projects', description: 'Built 4 projects' }
+    { icon: assets.project_icon, iconDark: assets.project_icon_dark, title: 'Experience', description: '1 year as a Full-Stack Software Engineer Intern at Creavint, shipping production web & mobile apps' },
+    { icon: assets.edu_icon, iconDark: assets.edu_icon_dark, title: 'Education', description: 'B.Sc. (Hons) in Information Technology, University of Moratuwa (2022 - 2026)' },
+    { icon: assets.code_icon, iconDark: assets.code_icon_dark, title: 'Projects', description: '10+ individual & team projects across web, mobile, cloud, and machine learning' }
+];
+
+export const competencies = [
+    { category: 'Languages', items: ['Java', 'C++', 'C', 'Python', 'TypeScript', 'JavaScript'] },
+    { category: 'Frontend (Web)', items: ['ReactJS', 'Angular', 'Next.js', 'Angular Material', 'Tailwind CSS', 'HTML', 'CSS'] },
+    { category: 'Frontend (Mobile)', items: ['Flutter', 'React Native', 'Expo'] },
+    { category: 'Backend', items: ['Spring Boot', 'Node.js', 'Django'] },
+    { category: 'Databases', items: ['PostgreSQL', 'MySQL', 'MS SQL', 'MongoDB'] },
+    { category: 'Cloud & DevOps', items: ['Docker', 'AWS', 'Firebase', 'GitHub Actions'] },
+    { category: 'Tools & Testing', items: ['Figma', 'Cypress', 'Cucumber BDD', 'Git'] },
+];
+
+export const experienceData = {
+    company: 'Creavint',
+    role: 'Full Stack Software Engineer Intern',
+    period: 'April 2025 - April 2026',
+    points: [
+        'Contributed to a full-stack Logistics Management platform built with React, React Native, Expo, Spring Boot, PostgreSQL, TypeScript, and Tailwind CSS. (Team)',
+        'Developed a Food Delivery application using React, React Native, Expo, Spring Boot, PostgreSQL, and TypeScript, with a microservices architecture dockerized on an Ubuntu VPS. (Team)',
+        'Built a Blog application with Next.js and Backblaze B2 for MDX content management and cloud image storage, and developed a Vehicle Rental mobile app frontend in React Native and Expo. (Individual)',
+        'Developed custom Perfex CRM modules in PHP, MySQL, jQuery/AJAX, and Bootstrap, including CRUD operations, role-based access control, transactional HTML emails, file uploads, public customer portals, and self-healing database migrations. (Individual)',
+    ],
+    tech: ['React', 'React Native', 'Expo', 'Spring Boot', 'PostgreSQL', 'TypeScript', 'Tailwind CSS', 'PHP', 'MySQL'],
+};
+
+export const educationData = [
+    {
+        title: 'B.Sc. (Hons) in Information Technology',
+        place: 'University of Moratuwa',
+        period: '2022 - 2026',
+        description: 'Faculty of Information Technology, Moratuwa, Sri Lanka.',
+    },
+    {
+        title: 'Linux Systems Administration and DevOps Engineering Training Program',
+        place: 'WSO2',
+        period: '2025',
+        description: 'Linux administration, networking, Docker, AWS, Terraform, Ansible, GitHub Actions, ArgoCD, and OpenSearch. Final project: a microservices e-commerce platform with an AI-powered PC Builder on a full CI/CD pipeline.',
+    },
 ];
 
 export const toolsData = [
-    assets.vscode, assets.androidstudio, assets.intellij, assets.WebStorm, assets.MySQL, assets.MSSQL, assets.PostgreSQL, assets.git, assets.figma, assets.gimp, assets.canva
+    assets.vscode, assets.androidstudio, assets.intellij, assets.WebStorm, assets.git, assets.figma, assets.gimp, assets.canva
 ];

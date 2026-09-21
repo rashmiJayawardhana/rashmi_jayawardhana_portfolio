@@ -1,4 +1,4 @@
-import { assets, infoList, toolsData } from '@/assets/assets'
+import { assets, infoList, toolsData, competencies } from '@/assets/assets'
 import Image from 'next/image'
 import React from 'react'
 import { motion } from "motion/react"
@@ -41,7 +41,7 @@ const About = ({isDarkMode}) => {
         whileInView={{opacity: 1}}
         transition={{duration: 0.6, delay: 0.8}}
         className='flex-1'>
-          <p className='mb-10 max-w-2xl font-Ovo'>Motivated and adaptable learner with a strong work ethic, dedicated to delivering results and seizing opportunities. Committed to continuous skill enhancement and seeking an internship in Software Engineering to apply knowledge and contribute to innovative projects.</p>  
+          <p className='mb-10 max-w-2xl font-Ovo'>I&apos;m a full-stack software engineer with a year of experience building production web and mobile applications using React, Angular, React Native, Spring Boot, and Node.js. I&apos;ve delivered scalable systems with microservices architecture and real-time features, and I&apos;m comfortable working across cloud and DevOps workflows with a strong focus on clean, well-tested code. I enjoy collaborating in teams and take pride in turning requirements into reliable products.</p>
           <motion.ul 
           initial={{opacity: 0}}
           whileInView={{opacity: 1}}
@@ -58,7 +58,27 @@ const About = ({isDarkMode}) => {
             ))}
           </motion.ul>
 
-          <motion.h4 
+          <motion.div
+          initial={{opacity: 0}}
+          whileInView={{opacity: 1}}
+          transition={{duration: 0.6, delay: 1.1}}
+          className='mt-6'>
+            <h4 className='mb-4 text-gray-700 font-Ovo dark:text-white/80'>Core Competencies</h4>
+            <div className='flex flex-col gap-3'>
+                {competencies.map(({category, items}, index)=>(
+                    <div key={index} className='flex flex-col sm:flex-row sm:items-start gap-1.5 sm:gap-4'>
+                        <span className='w-full sm:w-36 shrink-0 text-xs uppercase tracking-wide text-gray-500 dark:text-white/50'>{category}</span>
+                        <div className='flex flex-wrap gap-2'>
+                            {items.map((item, i)=>(
+                                <span key={i} className='text-xs sm:text-sm border-[0.5px] border-gray-400 rounded-full px-3 py-1 text-gray-700 hover:bg-lightHover duration-500 dark:border-white/40 dark:text-white/80 dark:hover:bg-darkHover/50'>{item}</span>
+                            ))}
+                        </div>
+                    </div>
+                ))}
+            </div>
+          </motion.div>
+
+          <motion.h4
           initial={{y: 20, opacity: 0}}
           whileInView={{y: 0, opacity: 1}}
           transition={{duration: 0.5, delay: 1.3}}

@@ -11,8 +11,13 @@ const ovo = Ovo({
 
 
 export const metadata = {
-  title: "Portfolio - Rashmi Jayawardhana",
-  description: "My Portfolio Website Using Next.js",
+  title: "Rashmi Jayawardhana | Full-Stack Software Engineer",
+  description: "Portfolio of Rashmi Jayawardhana, a full-stack software engineer specializing in React, Angular, React Native, Spring Boot, and Node.js — building scalable web and mobile applications.",
+  openGraph: {
+    title: "Rashmi Jayawardhana | Full-Stack Software Engineer",
+    description: "Full-stack software engineer specializing in React, Angular, React Native, Spring Boot, and Node.js — building scalable web and mobile applications.",
+    type: "website",
+  },
 };
 
 export default function RootLayout({ children }) {
