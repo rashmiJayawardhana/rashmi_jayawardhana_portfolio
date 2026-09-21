@@ -32,7 +32,7 @@ const About = ({isDarkMode}) => {
         whileInView={{opacity: 1}}
         transition={{duration: 0.6, delay: 0.5}}
         className='flex-1'>
-          <p className='mb-10 max-w-2xl font-Ovo text-gray-600 dark:text-white/80'>I&apos;m a full-stack software engineer with a year of experience building production web and mobile applications using React, Angular, React Native, Spring Boot, and Node.js. I&apos;ve delivered scalable systems with microservices architecture and real-time features, and I&apos;m comfortable working across cloud and DevOps workflows with a strong focus on clean, well-tested code. I enjoy collaborating in teams and take pride in turning requirements into reliable products.</p>
+          <p className='mb-10 max-w-2xl font-Ovo text-gray-600 dark:text-white/80'>I&apos;m a full-stack software engineer with over a year of experience building production web and mobile applications using React, Angular, React Native, Spring Boot, and Node.js. I&apos;ve delivered scalable systems with microservices architecture and real-time features, and I&apos;m comfortable working across cloud and DevOps workflows with a strong focus on clean, well-tested code. I enjoy collaborating in teams and take pride in turning requirements into reliable products.</p>
           <motion.ul
           initial={{opacity: 0}}
           whileInView={{opacity: 1}}

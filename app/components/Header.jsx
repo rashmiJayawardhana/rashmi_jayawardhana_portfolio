@@ -49,7 +49,7 @@ const Header = () => {
       initial={{opacity: 0}}
       whileInView={{opacity: 1}}
       transition={{duration: 0.6, delay: 0.7}}
-      className='max-w-xl mx-auto font-Ovo text-gray-600 dark:text-white/80'>Final-year IT undergraduate at the University of Moratuwa with a year of experience building production web and mobile apps. Based in Panadura, Sri Lanka.
+      className='max-w-xl mx-auto font-Ovo text-gray-600 dark:text-white/80'>Final-year IT undergraduate at the University of Moratuwa with over a year of experience building production web and mobile apps. Based in Panadura, Sri Lanka.
       </motion.p>
 
       {/* Contact is the filled primary action and the resume download the outlined secondary one.

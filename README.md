@@ -2,7 +2,7 @@
 <img width="1910" height="987" alt="image" src="https://github.com/user-attachments/assets/d3dbab14-3bb6-4b9e-8428-22b364ce82cc" />
 
 
-Welcome to my portfolio! I am a **Full-Stack Software Engineer** based in Panadura, Sri Lanka, and a final-year IT undergraduate at the **University of Moratuwa**. I have a year of professional experience building production web and mobile applications with React, Angular, React Native, Spring Boot, and Node.js, and I am currently looking for a Full Stack Software Engineer role.
+Welcome to my portfolio! I am a **Full-Stack Software Engineer** based in Panadura, Sri Lanka, and a final-year IT undergraduate at the **University of Moratuwa**. I have over a year of professional experience building production web and mobile applications with React, Angular, React Native, Spring Boot, and Node.js, and I am currently looking for a Full Stack Software Engineer role.
 
 ## 🌐 Live Demo
 Check out my portfolio here: **[portfolio-rashmi-jayawardhana.vercel.app](https://portfolio-rashmi-jayawardhana.vercel.app/)**

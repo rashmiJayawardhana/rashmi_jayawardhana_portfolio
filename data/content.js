@@ -108,7 +108,7 @@ export const serviceData = [
 
 // Summary cards in the About section. Each has a light and a dark icon because the PNGs cannot be recoloured with CSS.
 export const infoList = [
-    { icon: assets.project_icon, iconDark: assets.project_icon_dark, title: 'Experience', description: '1 year as a Full-Stack Software Engineer Intern at Creavint, shipping production web & mobile apps' },
+    { icon: assets.project_icon, iconDark: assets.project_icon_dark, title: 'Experience', description: 'Over a year as a Full-Stack Software Engineer Intern at Creavint, shipping production web & mobile apps' },
     { icon: assets.edu_icon, iconDark: assets.edu_icon_dark, title: 'Education', description: 'B.Sc. (Hons) in Information Technology, University of Moratuwa (2022 - 2026)' },
     { icon: assets.code_icon, iconDark: assets.code_icon_dark, title: 'Projects', description: '10+ individual & team projects across web, mobile, cloud, and machine learning' }
 ];
@@ -127,7 +127,7 @@ export const competencies = [
 export const experienceData = {
     company: 'Creavint',
     role: 'Full Stack Software Engineer Intern',
-    period: 'April 2025 - April 2026',
+    period: 'April 2025 - July 2026',
     points: [
         { type: 'Team', text: 'Contributed to a full-stack Logistics Management platform built with React, React Native, Expo, Spring Boot, PostgreSQL, TypeScript, and Tailwind CSS.' },
         { type: 'Team', text: 'Developed a Food Delivery application with a microservices architecture dockerized on an Ubuntu VPS, using React, React Native, Expo, Spring Boot, and PostgreSQL.' },
