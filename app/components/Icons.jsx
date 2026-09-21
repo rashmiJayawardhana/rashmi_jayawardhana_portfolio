@@ -14,7 +14,14 @@ export const LinkedinIcon = ({className = 'w-5'}) => (
   </svg>
 )
 
-export const MailIcon = ({className = 'w-5'}) => (
+// HackerRank's mark: a rounded hexagon with an arrowed "H" cut out (evenodd fill makes the inner shape a hole).
+export const HackerrankIcon = ({className = 'w-5'}) => (
+  <svg viewBox='0 0 24 24' className={className} fill='currentColor' aria-hidden='true'>
+    <path fillRule='evenodd' d='M10.26 1.29Q12 .3 13.74 1.29L20.56 5.21Q22.3 6.2 22.3 8.2L22.3 15.8Q22.3 17.8 20.56 18.79L13.74 22.71Q12 23.7 10.26 22.71L3.44 18.79Q1.7 17.8 1.7 15.8L1.7 8.2Q1.7 6.2 3.44 5.21Z M8.9 4.6L10.9 6.5H9.95V11H14.05V6.95H16.15V17.45H17.1L15.1 19.4L13.1 17.45H14.05V13H9.95V17H7.85V6.5H6.9Z' />
+  </svg>
+)
+
+export const MailIcon =({className = 'w-5'}) => (
   <svg viewBox='0 0 24 24' className={className} fill='none' stroke='currentColor' strokeWidth='2' aria-hidden='true'>
     <rect x='2.5' y='4.5' width='19' height='15' rx='2.5' />
     <path d='m3 7 8.1 5.4a1.6 1.6 0 0 0 1.8 0L21 7' strokeLinecap='round' />

@@ -2,12 +2,13 @@ import { assets } from '@/assets/assets'
 import { EMAIL, GITHUB_PROFILE, LINKEDIN_PROFILE, HACKERRANK_PROFILE } from '@/data/profile'
 import Image from 'next/image'
 import React from 'react'
-import { GithubIcon, LinkedinIcon, MailIcon } from './Icons'
+import { GithubIcon, LinkedinIcon, HackerrankIcon, MailIcon } from './Icons'
 
-// Profiles shown as icon buttons. HackerRank has no icon, so it is rendered separately as a text link.
+// Profiles shown as icon buttons. Add an entry here to add another profile.
 const socials = [
   { href: GITHUB_PROFILE, label: 'GitHub', Icon: GithubIcon },
   { href: LINKEDIN_PROFILE, label: 'LinkedIn', Icon: LinkedinIcon },
+  { href: HACKERRANK_PROFILE, label: 'HackerRank', Icon: HackerrankIcon },
 ]
 
 // Needs isDarkMode because the logo is a PNG with separate light and dark versions.
@@ -34,12 +35,6 @@ const Footer = ({isDarkMode}) => {
                 </a>
               </li>
             ))}
-            <li>
-              <a target='_blank' rel='noopener noreferrer' href={HACKERRANK_PROFILE}
-                 className='text-sm text-gray-600 hover:text-accent dark:hover:text-accentSoft duration-300 dark:text-white/70'>
-                HackerRank
-              </a>
-            </li>
         </ul>
       </div>
     </div>
