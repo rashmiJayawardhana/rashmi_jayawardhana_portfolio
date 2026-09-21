@@ -6,3 +6,7 @@
   font-family: Outfit;
 }
 
+::selection {
+  background-color: #567257;
+  color: #fff;
+}

@@ -93,6 +93,9 @@ export const assets = {
 };
 
 export const GITHUB_PROFILE = 'https://github.com/rashmiJayawardhana';
+export const LINKEDIN_PROFILE = 'https://www.linkedin.com/in/rashmijayawardhana/';
+export const HACKERRANK_PROFILE = 'https://www.hackerrank.com/profile/rashmijayawardh1';
+export const EMAIL = 'rashmijayawardhana2001@gmail.com';
 
 export const workData = [
     {
@@ -101,7 +104,8 @@ export const workData = [
         category: 'Cloud & DevOps',
         description: 'Designed and deployed a five-service e-commerce platform on AWS EKS Fargate with Terraform IaC and GitHub Actions CI/CD. Owned cost management (~50% reduction) and disaster recovery planning.',
         tech: ['Flask', 'Express', 'React', 'AWS EKS', 'Terraform', 'GitHub Actions'],
-        githubLink: GITHUB_PROFILE,
+        link: 'https://github.com/isuruij/CloudMart',
+        linkLabel: 'View Code',
     },
     {
         title: 'Project Management System for Construction Companies',
@@ -109,7 +113,8 @@ export const workData = [
         category: 'Full-Stack',
         description: 'Web and mobile platform for five user roles covering project, task, and inventory management, with real-time low-stock and email notifications. Owned the admin/client modules and JWT auth.',
         tech: ['React', 'Tailwind CSS', 'Flutter', 'Spring Boot', 'MySQL', 'Socket.IO'],
-        githubLink: 'https://github.com/Jayaweera123/Ascendia-.git',
+        link: 'https://github.com/Jayaweera123/Ascendia-',
+        linkLabel: 'View Code',
     },
     {
         title: 'Real-Time Task & Messaging App',
@@ -117,7 +122,8 @@ export const workData = [
         category: 'Full-Stack',
         description: 'Real-time messaging app on a hybrid REST/WebSocket architecture with push notifications, optimistic UI updates, offline queue handling, and automatic socket reconnection. Delivered in four days.',
         tech: ['React Native', 'TypeScript', 'Redux Toolkit', 'Node.js', 'Socket.IO', 'MySQL'],
-        githubLink: GITHUB_PROFILE,
+        link: 'https://github.com/rashmiJayawardhana/Real-Time_Tasks_App',
+        linkLabel: 'View Code',
     },
     {
         title: 'YouTube Upload Success Predictor for Sri Lankan Creators',
@@ -125,7 +131,8 @@ export const workData = [
         category: 'Machine Learning',
         description: 'XGBoost classifier (71.4% accuracy, 0.814 AUC-ROC) on pre-upload video features, using channel-relative labelling to prevent data leakage, with SHAP-based explanations served through Streamlit.',
         tech: ['Python', 'XGBoost', 'SHAP', 'Streamlit'],
-        githubLink: GITHUB_PROFILE,
+        link: 'https://youtube-performance-predictor.streamlit.app/',
+        linkLabel: 'Live Demo',
     },
     {
         title: 'QA Test Automation Suite',
@@ -133,7 +140,8 @@ export const workData = [
         category: 'QA & Testing',
         description: 'Designed UI and API test cases from SRS documents, automated test scenarios, generated Allure reports, and configured CI builds.',
         tech: ['Cypress', 'Cucumber BDD', 'Swagger', 'Allure', 'Jenkins'],
-        githubLink: GITHUB_PROFILE,
+        link: 'https://github.com/GihanShavinda/ITFac_Batch21_Group32',
+        linkLabel: 'View Code',
     },
     {
         title: 'Flight Tracking & Travel Management App',
@@ -141,7 +149,8 @@ export const workData = [
         category: 'Mobile',
         description: 'Full-stack mobile app for real-time flight tracking with secure authentication and a responsive Android and iOS interface.',
         tech: ['React Native', 'PostgreSQL', 'Zustand', 'Clerk', 'Tailwind CSS'],
-        githubLink: 'https://github.com/rashmiJayawardhana/OnTheWay.git',
+        link: 'https://github.com/rashmiJayawardhana/OnTheWay',
+        linkLabel: 'View Code',
     },
     {
         title: 'Task Manager Application',
@@ -149,7 +158,8 @@ export const workData = [
         category: 'Full-Stack',
         description: 'Task-tracking web app with CRUD operations, status filtering, threaded comments, JWT authentication, and role-based access, containerized with Docker Compose.',
         tech: ['Angular', 'Angular Material', 'Spring Boot', 'Spring Security', 'MySQL'],
-        githubLink: GITHUB_PROFILE,
+        link: 'https://github.com/rashmiJayawardhana/Task_Manager_App',
+        linkLabel: 'View Code',
     },
     {
         title: 'Automated Lecture Video Summarization',
@@ -157,24 +167,26 @@ export const workData = [
         category: 'Research',
         description: 'Co-developed a four-module deep learning pipeline condensing 60-minute lectures into narrated summaries. Owned Keyframe Detection (ResNet-50 + BiLSTM), reaching F1 = 0.87 on a 23,402-segment annotated dataset.',
         tech: ['PyTorch', 'Whisper', 'BERT', 'ViT', 'FastAPI', 'Supabase'],
-        githubLink: GITHUB_PROFILE,
+        link: 'https://github.com/rashmiJayawardhana/lecture-video-summarizer',
+        linkLabel: 'View Code',
     },
     {
         title: 'Cost-Performance Trade-offs in Cloud-Based LLM Inference',
         type: 'Individual', year: '2025',
         category: 'Research',
-        description: 'Reviewing AI/ML optimization techniques for cloud-based LLM serving — scheduling, deployment architecture, interruptible capacity, sparse models, and prompt reuse — into one cost-versus-latency view.',
+        description: 'Reviewing AI/ML optimization techniques for cloud-based LLM serving across scheduling, deployment architecture, interruptible capacity, sparse models, and prompt reuse, synthesizing them into one cost-versus-latency view.',
         tech: ['Review Paper'],
-        githubLink: null,
+        link: 'https://drive.google.com/drive/folders/1Q98TZl39vAFWB8EK3BoQdV7gp8YI9LD4?usp=sharing',
+        linkLabel: 'Read Paper',
         status: 'In Progress',
     },
 ]
 
 export const serviceData = [
-    { icon: assets.web_icon, title: 'Web Development', description: 'Build dynamic, responsive web apps with React, Angular, and Next.js, focused on clean UI and real-time features.', link: '' },
-    { icon: assets.mobile_icon, title: 'Mobile App Development', description: 'Develop cross-platform mobile apps with React Native, Flutter, and Expo, focused on performance and smooth UX.', link: '' },
-    { icon: assets.ui_icon, title: 'UI/UX Design', description: 'Design clean, usable interfaces in Figma and translate them into pixel-accurate, accessible UI.', link: '' },
-    { icon: null, title: 'Backend & Cloud Engineering', description: 'Build REST APIs and microservices with Spring Boot and Node.js, deployed with Docker, AWS, and CI/CD pipelines.', link: '' },
+    { icon: 'web', title: 'Web Development', description: 'Build dynamic, responsive web apps with React, Angular, and Next.js, focused on clean UI and real-time features.' },
+    { icon: 'mobile', title: 'Mobile App Development', description: 'Develop cross-platform mobile apps with React Native, Flutter, and Expo, focused on performance and smooth UX.' },
+    { icon: 'design', title: 'UI/UX Design', description: 'Design clean, usable interfaces in Figma and translate them into pixel-accurate, accessible UI.' },
+    { icon: 'backend', title: 'Backend & Cloud Engineering', description: 'Build REST APIs and microservices with Spring Boot and Node.js, deployed with Docker, AWS, and CI/CD pipelines.' },
 ]
 
 export const infoList = [
@@ -198,10 +210,10 @@ export const experienceData = {
     role: 'Full Stack Software Engineer Intern',
     period: 'April 2025 - April 2026',
     points: [
-        'Contributed to a full-stack Logistics Management platform built with React, React Native, Expo, Spring Boot, PostgreSQL, TypeScript, and Tailwind CSS. (Team)',
-        'Developed a Food Delivery application using React, React Native, Expo, Spring Boot, PostgreSQL, and TypeScript, with a microservices architecture dockerized on an Ubuntu VPS. (Team)',
-        'Built a Blog application with Next.js and Backblaze B2 for MDX content management and cloud image storage, and developed a Vehicle Rental mobile app frontend in React Native and Expo. (Individual)',
-        'Developed custom Perfex CRM modules in PHP, MySQL, jQuery/AJAX, and Bootstrap, including CRUD operations, role-based access control, transactional HTML emails, file uploads, public customer portals, and self-healing database migrations. (Individual)',
+        { type: 'Team', text: 'Contributed to a full-stack Logistics Management platform built with React, React Native, Expo, Spring Boot, PostgreSQL, TypeScript, and Tailwind CSS.' },
+        { type: 'Team', text: 'Developed a Food Delivery application with a microservices architecture dockerized on an Ubuntu VPS, using React, React Native, Expo, Spring Boot, and PostgreSQL.' },
+        { type: 'Individual', text: 'Built a Blog application with Next.js and Backblaze B2 for MDX content management and cloud image storage, plus a Vehicle Rental mobile app frontend in React Native and Expo.' },
+        { type: 'Individual', text: 'Developed custom Perfex CRM modules in PHP, MySQL, and jQuery/AJAX, including CRUD operations, role-based access control, transactional emails, file uploads, public customer portals, and self-healing database migrations.' },
     ],
     tech: ['React', 'React Native', 'Expo', 'Spring Boot', 'PostgreSQL', 'TypeScript', 'Tailwind CSS', 'PHP', 'MySQL'],
 };
@@ -211,13 +223,13 @@ export const educationData = [
         title: 'B.Sc. (Hons) in Information Technology',
         place: 'University of Moratuwa',
         period: '2022 - 2026',
-        description: 'Faculty of Information Technology, Moratuwa, Sri Lanka.',
+        description: 'Faculty of Information Technology, Moratuwa, Sri Lanka. Final-year undergraduate, graduating 2026.',
     },
     {
-        title: 'Linux Systems Administration and DevOps Engineering Training Program',
-        place: 'WSO2',
+        title: 'Linux Systems Administration & DevOps Engineering',
+        place: 'WSO2 Training Program',
         period: '2025',
-        description: 'Linux administration, networking, Docker, AWS, Terraform, Ansible, GitHub Actions, ArgoCD, and OpenSearch. Final project: a microservices e-commerce platform with an AI-powered PC Builder on a full CI/CD pipeline.',
+        description: 'Linux, networking, Docker, AWS, Terraform, Ansible, GitHub Actions, ArgoCD, and OpenSearch. Final project: a microservices e-commerce platform with an AI-powered PC Builder on a full CI/CD pipeline.',
     },
 ];
 
