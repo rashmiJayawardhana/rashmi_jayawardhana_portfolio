@@ -73,11 +73,12 @@ const Navbar = ({isDarkMode, onToggleTheme}) => {
             </ul>
         </nav>
 
-        {/* Hidden at the top of the page; pointer-events-none keeps the invisible button from catching clicks. */}
+        {/* Hidden at the top of the page; pointer-events-none keeps the invisible button from catching clicks.
+            On phones it is smaller and hugs the edge so it stays inside the side padding instead of covering text. */}
         <a
           href='#top'
           aria-label='Back to top'
-          className={`fixed bottom-8 right-8 z-40 w-11 h-11 flex items-center justify-center rounded-full bg-black text-white shadow-lg hover:bg-accent duration-500 dark:bg-white dark:text-black dark:hover:bg-accent dark:hover:text-white ${isScroll ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
+          className={`fixed bottom-4 right-3 w-9 h-9 sm:bottom-8 sm:right-8 sm:w-11 sm:h-11 z-40 flex items-center justify-center rounded-full bg-black text-white shadow-lg hover:bg-accent duration-500 dark:bg-white dark:text-black dark:hover:bg-accent dark:hover:text-white ${isScroll ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
             <svg viewBox='0 0 24 24' className='w-5' fill='none' stroke='currentColor' strokeWidth='2' strokeLinecap='round' strokeLinejoin='round'>
               <path d='m18 15-6-6-6 6' />
             </svg>

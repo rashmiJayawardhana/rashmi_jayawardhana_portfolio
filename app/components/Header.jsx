@@ -52,19 +52,20 @@ const Header = () => {
       className='max-w-xl mx-auto font-Ovo text-gray-600 dark:text-white/80'>Final-year IT undergraduate at the University of Moratuwa with a year of experience building production web and mobile apps. Based in Panadura, Sri Lanka.
       </motion.p>
 
-      {/* Contact is the filled primary action; the resume download is the outlined secondary action. */}
-      <div className='flex flex-col sm:flex-row items-center gap-4 mt-4'>
+      {/* Contact is the filled primary action and the resume download the outlined secondary one.
+          Stacked at equal width on phones, side by side from the sm breakpoint up. */}
+      <div className='w-full flex flex-col sm:flex-row items-center justify-center gap-4 mt-4'>
         <motion.a
         initial={{y: 30, opacity: 0}}
         whileInView={{y: 0, opacity: 1}}
         transition={{duration: 0.6, delay: 0.9}}
-        href="#contact" className='px-10 py-3 border border-white rounded-full bg-black text-white flex items-center gap-2 hover:bg-accent hover:border-accent duration-500 dark:bg-accent dark:border-accent dark:hover:bg-accentSoft dark:hover:border-accentSoft dark:hover:text-darkTheme'>Contact Me <Image src={assets.right_arrow_white} alt='' className='w-4'/>
+        href="#contact" className='w-full max-w-xs sm:w-auto justify-center px-10 py-3 border border-white rounded-full bg-black text-white flex items-center gap-2 hover:bg-accent hover:border-accent duration-500 dark:bg-accent dark:border-accent dark:hover:bg-accentSoft dark:hover:border-accentSoft dark:hover:text-darkTheme'>Contact Me <Image src={assets.right_arrow_white} alt='' className='w-4'/>
         </motion.a>
         <motion.a
         initial={{y: 30, opacity: 0}}
         whileInView={{y: 0, opacity: 1}}
         transition={{duration: 0.6, delay: 1}}
-        href={RESUME_URL} download className='px-10 py-3 border rounded-full border-gray-500 flex items-center gap-2 bg-white hover:bg-lightHover duration-500 dark:bg-transparent dark:text-darkText dark:border-white/50 dark:hover:bg-darkHover'>Download Resume <Image src={assets.download_icon} alt='' className='w-4 dark:invert'/>
+        href={RESUME_URL} download className='w-full max-w-xs sm:w-auto justify-center px-10 py-3 border rounded-full border-gray-500 flex items-center gap-2 bg-white hover:bg-lightHover duration-500 dark:bg-transparent dark:text-darkText dark:border-white/50 dark:hover:bg-darkHover'>Download Resume <Image src={assets.download_icon} alt='' className='w-4 dark:invert'/>
         </motion.a>
       </div>
 
