@@ -1,37 +1,23 @@
-import { assets, experienceData, educationData } from '@/assets/assets'
+import { assets } from '@/assets/assets'
+import { experienceData, educationData } from '@/data/content'
 import Image from 'next/image'
 import React from 'react'
 import { motion } from "motion/react"
+import Section from './Section'
+import SectionHeading from './SectionHeading'
 
+// Career history: the featured role card, education and training cards, and a volunteering note.
+// Needs isDarkMode because the education icon is a PNG with separate light and dark versions.
 const Experience = ({isDarkMode}) => {
   return (
-    <motion.div
-      initial={{opacity: 0}}
-      whileInView={{opacity: 1}}
-      transition={{duration: 1}}
-      id='experience' className='w-full px-[12%] py-20 scroll-mt-20'>
-      <motion.h4
-      initial={{y: -20, opacity: 0}}
-      whileInView={{y: 0, opacity: 1}}
-      transition={{duration: 0.5, delay: 0.3}}
-      className='text-center mb-2 text-lg font-Ovo text-accent dark:text-accentSoft'>
-        Career
-      </motion.h4>
-      <motion.h2
-      initial={{y: -20, opacity: 0}}
-      whileInView={{y: 0, opacity: 1}}
-      transition={{duration: 0.5, delay: 0.5}}
-      className='text-center text-4xl sm:text-5xl font-Ovo'>
-        Experience & Education
-      </motion.h2>
-      <motion.p
-      initial={{opacity: 0}}
-      whileInView={{opacity: 1}}
-      transition={{delay: 0.7, duration: 0.5}}
-      className='text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo text-gray-600 dark:text-white/80'>
-        Where I&apos;ve worked, studied, and trained.
-      </motion.p>
+    <Section id='experience'>
+      <SectionHeading
+        eyebrow='Career'
+        title='Experience & Education'
+        description={<>Where I&apos;ve worked, studied, and trained.</>}
+      />
 
+      {/* The thick accent left border marks this as the primary card in the section. */}
       <motion.div
       initial={{opacity: 0, y: 30}}
       whileInView={{opacity: 1, y: 0}}
@@ -47,6 +33,7 @@ const Experience = ({isDarkMode}) => {
         <ul className='flex flex-col gap-4'>
             {experienceData.points.map(({type, text}, index)=>(
                 <li key={index} className='flex gap-3 text-sm text-gray-600 leading-relaxed dark:text-white/80'>
+                    {/* Custom dot instead of list-disc so its colour can follow the accent in both themes. */}
                     <span className='mt-2 w-1.5 h-1.5 rounded-full bg-accent dark:bg-accentSoft shrink-0'></span>
                     <span>
                       {text}
@@ -87,7 +74,7 @@ const Experience = ({isDarkMode}) => {
       className='text-center text-sm text-gray-500 max-w-2xl mx-auto mt-8 dark:text-white/60'>
         Also volunteered as a Mathematics teacher and district coordinator with Sasnaka Sansada (2021 - 2023), teaching STEM to government-school students.
       </motion.p>
-    </motion.div>
+    </Section>
   )
 }
 

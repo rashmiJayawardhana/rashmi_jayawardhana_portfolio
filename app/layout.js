@@ -1,6 +1,7 @@
 import { Outfit, Ovo } from "next/font/google";
 import "./globals.css";
 
+// Outfit is the body font and Ovo the serif used for headings via the `font-Ovo` utility.
 const outfit = Outfit({
   subsets: ["latin"], weight: ["400", "500", "600", "700"]
 });
@@ -10,6 +11,7 @@ const ovo = Ovo({
 });
 
 
+// Used for the browser tab title, search results, and link previews when the site is shared.
 export const metadata = {
   title: "Rashmi Jayawardhana | Full-Stack Software Engineer",
   description: "Portfolio of Rashmi Jayawardhana, a full-stack software engineer specializing in React, Angular, React Native, Spring Boot, and Node.js, building scalable web and mobile applications.",

@@ -1,9 +1,11 @@
-import { assets, GITHUB_PROFILE, LINKEDIN_PROFILE } from '@/assets/assets'
+import { assets } from '@/assets/assets'
+import { GITHUB_PROFILE, LINKEDIN_PROFILE, RESUME_URL } from '@/data/profile'
 import Image from 'next/image'
 import React from 'react'
 import { motion } from "motion/react"
 import { GithubIcon, LinkedinIcon } from './Icons'
 
+// Hero section: first thing visitors see. id='top' is the target of the Home link and back-to-top button.
 const Header = () => {
   return (
     <div id='top' className='w-11/12 max-w-3xl text-center mx-auto min-h-screen flex flex-col items-center justify-center gap-4 pt-32 pb-24'>
@@ -16,6 +18,7 @@ const Header = () => {
         <Image src={assets.profile_img} alt='Rashmi Jayawardhana' className='rounded-full w-32 border-4 border-white dark:border-darkTheme'/>
       </motion.div>
 
+      {/* Availability badge: the pinging dot draws the eye to the job-seeking status. */}
       <motion.div
       initial={{y: -10, opacity: 0}}
       whileInView={{y: 0, opacity: 1}}
@@ -49,6 +52,7 @@ const Header = () => {
       className='max-w-xl mx-auto font-Ovo text-gray-600 dark:text-white/80'>Final-year IT undergraduate at the University of Moratuwa with a year of experience building production web and mobile apps. Based in Panadura, Sri Lanka.
       </motion.p>
 
+      {/* Contact is the filled primary action; the resume download is the outlined secondary action. */}
       <div className='flex flex-col sm:flex-row items-center gap-4 mt-4'>
         <motion.a
         initial={{y: 30, opacity: 0}}
@@ -60,7 +64,7 @@ const Header = () => {
         initial={{y: 30, opacity: 0}}
         whileInView={{y: 0, opacity: 1}}
         transition={{duration: 0.6, delay: 1}}
-        href="/Resume-Rashmi_Jayawardhana.pdf" download className='px-10 py-3 border rounded-full border-gray-500 flex items-center gap-2 bg-white hover:bg-lightHover duration-500 dark:bg-transparent dark:text-darkText dark:border-white/50 dark:hover:bg-darkHover'>Download Resume <Image src={assets.download_icon} alt='' className='w-4 dark:invert'/>
+        href={RESUME_URL} download className='px-10 py-3 border rounded-full border-gray-500 flex items-center gap-2 bg-white hover:bg-lightHover duration-500 dark:bg-transparent dark:text-darkText dark:border-white/50 dark:hover:bg-darkHover'>Download Resume <Image src={assets.download_icon} alt='' className='w-4 dark:invert'/>
         </motion.a>
       </div>
 

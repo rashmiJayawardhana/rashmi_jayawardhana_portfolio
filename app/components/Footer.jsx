@@ -1,13 +1,16 @@
-import { assets, EMAIL, GITHUB_PROFILE, LINKEDIN_PROFILE, HACKERRANK_PROFILE } from '@/assets/assets'
+import { assets } from '@/assets/assets'
+import { EMAIL, GITHUB_PROFILE, LINKEDIN_PROFILE, HACKERRANK_PROFILE } from '@/data/profile'
 import Image from 'next/image'
 import React from 'react'
 import { GithubIcon, LinkedinIcon, MailIcon } from './Icons'
 
+// Profiles shown as icon buttons. HackerRank has no icon, so it is rendered separately as a text link.
 const socials = [
   { href: GITHUB_PROFILE, label: 'GitHub', Icon: GithubIcon },
   { href: LINKEDIN_PROFILE, label: 'LinkedIn', Icon: LinkedinIcon },
 ]
 
+// Needs isDarkMode because the logo is a PNG with separate light and dark versions.
 const Footer = ({isDarkMode}) => {
   return (
     <div className='mt-20'>
@@ -20,6 +23,7 @@ const Footer = ({isDarkMode}) => {
       </div>
 
       <div className='text-center sm:flex items-center justify-between border-t border-gray-400 mx-[10%] mt-12 py-6'>
+        {/* The page is prerendered at build time, so the client year can differ from the baked HTML after New Year. */}
         <p suppressHydrationWarning className='text-sm text-gray-600 dark:text-white/70'>© {new Date().getFullYear()} Rashmi Jayawardhana. All rights reserved.</p>
         <ul className='flex items-center gap-4 justify-center mt-4 sm:mt-0'>
             {socials.map(({href, label, Icon})=>(

@@ -6,6 +6,7 @@
   font-family: Outfit;
 }
 
+/* Highlight colour for selected text; matches the `accent` token in tailwind.config.mjs. */
 ::selection {
   background-color: #567257;
   color: #fff;

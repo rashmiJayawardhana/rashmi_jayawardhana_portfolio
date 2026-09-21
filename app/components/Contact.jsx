@@ -1,66 +1,33 @@
-import { assets, EMAIL } from '@/assets/assets'
+import { assets } from '@/assets/assets'
+import { EMAIL } from '@/data/profile'
 import Image from 'next/image'
-import React, { useState } from 'react'
+import React from 'react'
 import { motion } from "motion/react"
+import Section from './Section'
+import SectionHeading from './SectionHeading'
+import useContactForm from '@/hooks/useContactForm'
 
+// Colour for the result message under the form, keyed by submission status.
+const STATUS_CLASSES = {
+  success: 'text-accent dark:text-accentSoft',
+  error: 'text-red-500',
+}
+const DEFAULT_STATUS_CLASS = 'text-gray-500 dark:text-white/60'
+
+// Contact section. Presentation only: sending and state live in useContactForm.
 const Contact = () => {
-  const [result, setResult] = useState("");
-  const [status, setStatus] = useState("");
-
-  const onSubmit = async (event) => {
-    event.preventDefault();
-    setStatus("sending");
-    setResult("Sending....");
-    const formData = new FormData(event.target);
-
-    formData.append("access_key", "8ad5be9b-7b98-4120-a6a7-6d49b8673731");
-
-    const response = await fetch("https://api.web3forms.com/submit", {
-      method: "POST",
-      body: formData
-    });
-
-    const data = await response.json();
-
-    if (data.success) {
-      setStatus("success");
-      setResult("Thanks! Your message has been sent. I'll get back to you soon.");
-      event.target.reset();
-    } else {
-      console.log("Error", data);
-      setStatus("error");
-      setResult(data.message);
-    }
-  };
+  const { result, status, onSubmit } = useContactForm()
 
   return (
-    <motion.div
-      initial={{opacity: 0}}
-      whileInView={{opacity: 1}}
-      transition={{duration: 1}}
+    <Section
       id='contact'
-      className='w-full px-[12%] py-20 scroll-mt-20 bg-[url("/footer-bg-color.png")] bg-no-repeat bg-center bg-[length:90%_auto] dark:bg-none'>
-      <motion.h4
-      initial={{y: -20, opacity: 0}}
-      whileInView={{y: 0, opacity: 1}}
-      transition={{duration: 0.5, delay: 0.3}}
-      className='text-center mb-2 text-lg font-Ovo text-accent dark:text-accentSoft'>
-        Connect with me
-      </motion.h4>
-        <motion.h2
-        initial={{y: -20, opacity: 0}}
-        whileInView={{y: 0, opacity: 1}}
-        transition={{duration: 0.5, delay: 0.5}}
-        className='text-center text-4xl sm:text-5xl font-Ovo'>
-          Get in touch
-        </motion.h2>
-        <motion.p
-        initial={{opacity: 0}}
-        whileInView={{opacity: 1}}
-        transition={{delay: 0.7, duration: 0.5}}
-        className='text-center max-w-2xl mx-auto mt-5 mb-4 font-Ovo text-gray-600 dark:text-white/80'>
-          Have a role, a project, or a question in mind? Drop me a message and I&apos;ll get back to you.
-        </motion.p>
+      className='bg-[url("/footer-bg-color.png")] bg-no-repeat bg-center bg-[length:90%_auto] dark:bg-none'>
+      <SectionHeading
+        eyebrow='Connect with me'
+        title='Get in touch'
+        description={<>Have a role, a project, or a question in mind? Drop me a message and I&apos;ll get back to you.</>}
+        descriptionSpacing='mt-5 mb-4'
+      />
         <motion.a
         initial={{opacity: 0}}
         whileInView={{opacity: 1}}
@@ -76,6 +43,7 @@ const Contact = () => {
           transition={{delay: 0.9, duration: 0.5}}
           onSubmit={onSubmit}
           className='max-w-2xl mx-auto'>
+            {/* The `name` attributes below become the field names in the email Web3Forms sends. */}
             <div className='grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6'>
                 <motion.input
                  initial={{x: -50, opacity: 0}}
@@ -106,6 +74,7 @@ const Contact = () => {
               className='w-full p-4 outline-none border-[0.5px] border-gray-400 rounded-md bg-white mb-6 focus:border-accent dark:bg-darkHover/30 dark:border-white/90 dark:focus:border-accent transition'
               name='message'>
             </motion.textarea>
+            {/* Disabled while sending so a double click cannot submit the message twice. */}
             <motion.button
               whileHover={{scale: 1.05}}
               transition={{duration: 0.3}}
@@ -119,13 +88,10 @@ const Contact = () => {
             </motion.button>
 
             {result && (
-              <p className={`mt-6 text-center text-sm ${
-                status === 'success' ? 'text-accent dark:text-accentSoft' : status === 'error' ? 'text-red-500' : 'text-gray-500 dark:text-white/60'
-              }`}>{result}</p>
+              <p className={`mt-6 text-center text-sm ${STATUS_CLASSES[status] || DEFAULT_STATUS_CLASS}`}>{result}</p>
             )}
         </motion.form>
-
-    </motion.div>
+    </Section>
   )
 }
 

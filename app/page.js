@@ -1,5 +1,4 @@
 'use client'
-import { useEffect, useState } from "react";
 import About from "./components/About";
 import Contact from "./components/Contact";
 import Experience from "./components/Experience";
@@ -8,36 +7,22 @@ import Header from "./components/Header";
 import Navbar from "./components/Navbar";
 import Services from "./components/Services";
 import Work from "./components/Work";
+import useDarkMode from "@/hooks/useDarkMode";
 
+// Page composition only. Section order here is the order on screen and must match navLinks in data/content.js.
+// isDarkMode is passed only to components that swap PNG images, since CSS dark: classes cannot change an image source.
 export default function Home() {
-  const[isDarkMode, setIsDarkMode] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useDarkMode();
 
-  useEffect(()=>{
-    if (localStorage.theme ==='dark'||(!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme:dark)').matches)){
-      setIsDarkMode(true)
-    } else {
-      setIsDarkMode(false)
-    }
-  },[])
-
-  useEffect(()=>{
-    if (isDarkMode){
-      document.documentElement.classList.add('dark');
-      localStorage.theme = 'dark';
-    }else{
-      document.documentElement.classList.remove('dark');
-      localStorage.theme = '';
-    }
-  },[isDarkMode])
   return (
     <>
-    <Navbar isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode}/>
-    <Header isDarkMode={isDarkMode}/>
+    <Navbar isDarkMode={isDarkMode} onToggleTheme={() => setIsDarkMode(prev => !prev)}/>
+    <Header/>
     <About isDarkMode={isDarkMode}/>
     <Experience isDarkMode={isDarkMode}/>
-    <Services isDarkMode={isDarkMode}/>
-    <Work isDarkMode={isDarkMode}/>
-    <Contact isDarkMode={isDarkMode}/>
+    <Services/>
+    <Work/>
+    <Contact/>
     <Footer isDarkMode={isDarkMode}/>
     </>
   );

@@ -1,29 +1,17 @@
-import { assets, infoList, toolsData, competencies } from '@/assets/assets'
+import { assets } from '@/assets/assets'
+import { infoList, toolsData, competencies } from '@/data/content'
 import Image from 'next/image'
 import React from 'react'
 import { motion } from "motion/react"
+import Section from './Section'
+import SectionHeading from './SectionHeading'
 
+// Introduction: photo, bio, summary cards, grouped skills, and the tools row.
+// Needs isDarkMode because the summary card icons are PNGs with separate light and dark versions.
 const About = ({isDarkMode}) => {
   return (
-    <motion.div
-      initial={{opacity: 0}}
-      whileInView={{opacity: 1}}
-      transition={{duration: 1}}
-      id='about' className='w-full px-[12%] py-20 scroll-mt-20 bg-lightHover dark:bg-darkHover/20'>
-      <motion.h4
-        initial={{y: -20, opacity: 0}}
-        whileInView={{y: 0, opacity: 1}}
-        transition={{duration: 0.5, delay: 0.3}}
-        className='text-center mb-2 text-lg font-Ovo text-accent dark:text-accentSoft'>
-          Introduction
-      </motion.h4>
-      <motion.h2
-      initial={{y: -20, opacity: 0}}
-      whileInView={{y: 0, opacity: 1}}
-      transition={{duration: 0.5, delay: 0.5}}
-      className='text-center text-4xl sm:text-5xl font-Ovo'>
-        About me
-      </motion.h2>
+    <Section id='about' className='bg-lightHover dark:bg-darkHover/20'>
+      <SectionHeading eyebrow='Introduction' title='About me' />
       <motion.div
       initial={{opacity: 0}}
       whileInView={{opacity: 1}}
@@ -34,6 +22,7 @@ const About = ({isDarkMode}) => {
         whileInView={{opacity: 1, scale: 1}}
         transition={{duration: 0.6}}
         className='w-64 sm:w-80 shrink-0'>
+            {/* The photo is a transparent cutout, so the gradient card gives it a backdrop and the rounded edge becomes the crop line. */}
             <div className='rounded-3xl overflow-hidden flex items-end justify-center border-[0.5px] border-gray-300 bg-gradient-to-b from-accent/25 to-white dark:border-white/20 dark:from-accent/25 dark:to-darkTheme'>
               <Image src={assets.user_image} alt='Rashmi Jayawardhana' className='w-full'/>
             </div>
@@ -69,6 +58,7 @@ const About = ({isDarkMode}) => {
             <div className='flex flex-col gap-3'>
                 {competencies.map(({category, items}, index)=>(
                     <div key={index} className='flex flex-col sm:flex-row sm:items-start gap-1.5 sm:gap-4'>
+                        {/* Fixed-width label column on larger screens keeps every skill row aligned. */}
                         <span className='w-full sm:w-36 shrink-0 text-xs uppercase tracking-wider text-gray-500 sm:pt-1.5 dark:text-white/50'>{category}</span>
                         <div className='flex flex-wrap gap-2'>
                             {items.map((item, i)=>(
@@ -101,7 +91,7 @@ const About = ({isDarkMode}) => {
           </motion.ul>
         </motion.div>
       </motion.div>
-    </motion.div>
+    </Section>
   )
 }
 
