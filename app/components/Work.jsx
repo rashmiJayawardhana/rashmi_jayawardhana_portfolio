@@ -77,12 +77,9 @@ const Work = () => {
                 {project.org && <p className='text-xs text-gray-400 mt-0.5 dark:text-white/40'>{project.org}</p>}
                 <p className='text-sm text-gray-600 leading-relaxed mt-3 mb-5 dark:text-white/65'>{project.description}</p>
                 <div className='flex flex-wrap gap-1.5 mb-5'>
-                    {project.tech.slice(0, 4).map((tech, i)=>(
+                    {project.tech.map((tech, i)=>(
                         <span key={i} className='text-xs bg-gray-100 rounded px-2 py-0.5 text-gray-600 dark:bg-white/5 dark:text-white/55'>{tech}</span>
                     ))}
-                    {project.tech.length > 4 && (
-                        <span className='text-xs px-1 py-0.5 text-gray-400 dark:text-white/35'>+{project.tech.length - 4}</span>
-                    )}
                 </div>
                 <div className='mt-auto flex items-center justify-between gap-3'>
                     {project.link && (
