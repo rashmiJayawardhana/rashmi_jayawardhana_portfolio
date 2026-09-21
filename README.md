@@ -15,15 +15,15 @@ Check out my portfolio here: **[portfolio-rashmi-jayawardhana.vercel.app](https:
 - **Deployment:** Vercel
 
 ## 🎨 Features
-✔️ **Light theme by default** with a dark mode toggle that remembers the visitor's choice
-✔️ **Filterable project showcase** by category (Full-Stack, Mobile, Cloud & DevOps, Machine Learning, QA & Testing, Research)
-✔️ **Experience & Education timeline** covering professional work, degree, and DevOps training
-✔️ **Core competencies** grouped by languages, frontend, backend, databases, cloud, and tools
-✔️ **Active section highlighting** in the navbar as you scroll, plus a back-to-top button
-✔️ **Scroll-based animations** to reveal content as it comes into view
-✔️ **Contact form** with sending, success, and error states
-✔️ **Resume download** straight from the hero section
-✔️ **Fully responsive**, with an eye-friendly dark theme designed for comfortable reading
+- ✔️ **Light theme by default** with a dark mode toggle that remembers the visitor's choice
+- ✔️ **Filterable project showcase** by category (Full-Stack, Mobile, Cloud & DevOps, Machine Learning, QA & Testing, Research)
+- ✔️ **Experience & Education timeline** covering professional work, degree, and DevOps training
+- ✔️ **Core competencies** grouped by languages, frontend, backend, databases, cloud, and tools
+- ✔️ **Active section highlighting** in the navbar as you scroll, plus a back-to-top button
+- ✔️ **Scroll-based animations** to reveal content as it comes into view
+- ✔️ **Contact form** with sending, success, and error states
+- ✔️ **Resume download** straight from the hero section
+- ✔️ **Fully responsive**, with an eye-friendly dark theme designed for comfortable reading
 
 ## 📂 Getting Started
 To run this project locally, follow these steps:
