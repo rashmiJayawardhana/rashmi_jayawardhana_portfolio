@@ -1,5 +1,6 @@
 # 🚀 Rashmi Jayawardhana - Portfolio
-![Screenshot (5)](https://github.com/user-attachments/assets/e00170af-18ee-4c39-91d7-cd41eb2e0e16)
+![Screenshot (5)](https://github.com/user-attachments/assets/e00170af-18ee-4c39-91d7-cd41eb2e0e16)<img width="1910" height="987" alt="image" src="https://github.com/user-attachments/assets/d3dbab14-3bb6-4b9e-8428-22b364ce82cc" />
+
 
 Welcome to my portfolio! I am a **Full-Stack Software Engineer** based in Panadura, Sri Lanka, and a final-year IT undergraduate at the **University of Moratuwa**. I have a year of professional experience building production web and mobile applications with React, Angular, React Native, Spring Boot, and Node.js, and I am currently looking for a Full Stack Software Engineer role.
 
